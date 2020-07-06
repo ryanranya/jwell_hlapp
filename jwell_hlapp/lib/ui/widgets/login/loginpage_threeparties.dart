@@ -27,6 +27,8 @@ class RYThreePartiesWidget extends StatelessWidget {
   Widget _LoginIconButton(
       String title, String imageName, String BoxDecorationColor) {
     return ButtonTheme(
+      highlightColor: Colors.transparent,
+      splashColor: Colors.transparent,
       padding: EdgeInsets.only(left: 0),
       child: Container(
         height: 40,
