@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:jwell_hlapp/core/router/router.dart';
 import 'package:jwell_hlapp/core/usershared/user_loginmessage.dart';
-import 'package:jwell_hlapp/ui/pages/login/login.dart';
+import 'package:jwell_hlapp/ui/pages/login/phone_login.dart';
 import 'package:jwell_hlapp/ui/pages/main/main.dart';
 import 'package:jwell_hlapp/ui/shared/app_theme.dart';
 

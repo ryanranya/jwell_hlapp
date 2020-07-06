@@ -31,6 +31,10 @@ dependencies:
 
 #屏幕适配
   flutter_screenutil: ^2.2.0
+  #键盘管理
+  flutter_keyboard_visibility: ^3.2.1
+  #传值
+  event_bus: ^1.1.1
 
 dev_dependencies:
   flutter_test:

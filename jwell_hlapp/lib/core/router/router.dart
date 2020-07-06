@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jwell_hlapp/core/usershared/user_loginmessage.dart';
-import 'package:jwell_hlapp/ui/pages/login/login.dart';
+import 'package:jwell_hlapp/ui/pages/login/phone_login.dart';
 import 'package:jwell_hlapp/ui/pages/main/main.dart';
 
 class RYRouter {
