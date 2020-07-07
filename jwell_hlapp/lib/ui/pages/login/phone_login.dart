@@ -1,9 +1,11 @@
+import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
-import 'package:jwell_hlapp/core/evenbus/evenbus_Initialize.dart';
-import 'package:jwell_hlapp/core/evenbus/loginpage_inputtext_evenbus.dart';
+import 'package:jwell_hlapp/core/router/application.dart';
+import 'package:jwell_hlapp/core/router/router_config.dart';
+import 'package:jwell_hlapp/ui/pages/login/passwordandaccount_login.dart';
 import 'package:jwell_hlapp/ui/widgets/login/loginpage_accountandpassword.dart';
 import 'package:jwell_hlapp/ui/widgets/login/loginpage_bottom.dart';
 import 'package:jwell_hlapp/ui/widgets/login/loginpage_button.dart';
@@ -23,16 +25,6 @@ class _RYLoginScreenState extends State<RYLoginScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    evenBus.on<LoginPageEvenBus>().listen((data) {
-      print(data.inputTextField);
-      setState(() {
-        if (data.inputTextField.length > 0) {
-          isCanClick = true;
-        } else {
-          isCanClick = false;
-        }
-      });
-    });
   }
 
   @override
@@ -57,34 +49,50 @@ class _RYLoginScreenState extends State<RYLoginScreen> {
                 LoginPageRegisterTitleWidget(),
                 SizedBox(height: 80.h),
                 LoginPageInputTextFiledWidget(
+                  obscureText: false,
                   placeholderString: "请输入你的手机号码",
                   imageName: Icon(
                     Icons.phone_iphone,
                     size: 20,
                     color: Color(0xFFB5B7BA),
                   ),
+                  isShowDeleteIcon: true,
+                  filedTextCallBack: (content) {
+                    setState(() {
+                      if (content.length > 0) {
+                        isCanClick = true;
+                      } else {
+                        isCanClick = false;
+                      }
+                    });
+                  },
                 ),
                 SizedBox(
                   height: 40.h,
                 ),
                 LoginButtonWidget(
-                  buttonString: "登录",
+                  buttonString: "下一步",
                   isCanClick: isCanClick,
                   onTap: (buttonTitle) {
                     print("点击了登录");
                   },
                 ),
                 AccountAndPasswordWidget(
-                  passwordAndAccountClickBackonTap: (titleString){
-                    print(titleString);
+                  loginTitleString: "账号密码登录",
+                  passwordAndAccountClickBackonTap: (titleString) {
+                    jumpToPasswordAndAccountLogin();
                   },
-                  registerButtonClickBackonTap: (titleString){
+                  registerButtonClickBackonTap: (titleString) {
                     print(titleString);
                   },
                 ),
-                SizedBox(height: 280.h,),
+                SizedBox(
+                  height: 280.h,
+                ),
                 RYThreePartiesWidget(),
-                SizedBox(height: 20.h,),
+                SizedBox(
+                  height: 20.h,
+                ),
                 RYLoginPageBottomWidget(),
               ],
             ),
@@ -92,5 +100,17 @@ class _RYLoginScreenState extends State<RYLoginScreen> {
         ),
       ),
     );
+  }
+
+  void jumpToPasswordAndAccountLogin() {
+    Application.router.navigateTo(context, Routes.psdAndAccountogin,transition: TransitionType.native);
+//  Navigator.of(context).pushNamed(
+//      MaterialPageRoute(
+//          builder: (ctx){
+//            return RYPassWordAndAccountLoginPage();
+//          }),);
+//    Navigator.of(context).push(MaterialPageRoute(builder: (ctx) {
+//      return RYPassWordAndAccountLoginPage();
+//    }));
   }
 }

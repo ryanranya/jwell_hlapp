@@ -7,6 +7,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:jwell_hlapp/core/components/app_component.dart';
 
 import 'package:jwell_hlapp/main.dart';
 

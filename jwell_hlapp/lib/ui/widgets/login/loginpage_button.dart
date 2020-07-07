@@ -31,7 +31,7 @@ class _LoginButtonWidgetState extends State<LoginButtonWidget> {
         margin: EdgeInsets.only(left: 28.w, right: 28.w),
         child: FlatButton(
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(48.w),
+            borderRadius: BorderRadius.circular(48.h),
           ),
           onPressed: widget.isCanClick?(){
             widget.onTap(widget.buttonString);

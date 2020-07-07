@@ -1,11 +1,8 @@
 import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:jwell_hlapp/core/router/router.dart';
-import 'package:jwell_hlapp/core/usershared/user_loginmessage.dart';
-import 'package:jwell_hlapp/ui/pages/login/phone_login.dart';
-import 'package:jwell_hlapp/ui/pages/main/main.dart';
-import 'package:jwell_hlapp/ui/shared/app_theme.dart';
+import 'package:jwell_hlapp/core/components/app_component.dart';
 
 void main() {
   if (Platform.isAndroid) {
@@ -14,21 +11,4 @@ void main() {
     SystemChrome.setSystemUIOverlayStyle(systemUiOverlayStyle);
   }
   runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: '海螺协同',
-//      关于主题
-      theme: RYAppTheme.norTheme,
-//      关于路由
-//      initialRoute: RYRouter.initialRoute,
-      home: RYUserLoginMessage.isLogin?RYMainScreen():RYLoginScreen(),
-      onGenerateRoute: RYRouter.generateRoute,
-      onUnknownRoute: RYRouter.unknownRoute,
-    );
-  }
 }
