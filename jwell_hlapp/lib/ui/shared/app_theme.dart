@@ -9,7 +9,7 @@ class RYAppTheme {
 //  2、普通模式
   static final Color norTextColors = Colors.red;
   static final ThemeData norTheme = ThemeData(
-      primarySwatch: Colors.pink,
+      primarySwatch: Colors.blue,
       canvasColor: Colors.white,
       splashColor: Colors.transparent,
       highlightColor: Colors.transparent,

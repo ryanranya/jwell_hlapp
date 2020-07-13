@@ -29,7 +29,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.3
 
-#屏幕适配
+  #屏幕适配
   flutter_screenutil: ^2.2.0
   #键盘管理
   flutter_keyboard_visibility: ^3.2.1
@@ -63,6 +63,7 @@ flutter:
     - assets/images/login/2.0x/
     - assets/images/login/3.0x/
     - assets/images/login/
+    - assets/images/home/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

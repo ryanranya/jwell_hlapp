@@ -7,4 +7,6 @@ class RYUserLoginMessage{
       final counter = prefs.getBool('isLogin') ?? false;
        return counter;
    }
+
+   static bool isLoginSuccess = false;
 }

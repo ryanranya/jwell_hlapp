@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
+import 'package:jwell_hlapp/core/components/app_component.dart';
+import 'package:jwell_hlapp/core/router/application.dart';
 import 'package:jwell_hlapp/core/service/login/login_userNameAndAccount.dart';
+import 'package:jwell_hlapp/core/usershared/user_loginmessage.dart';
 import 'package:jwell_hlapp/core/viewmodel/login_passwordandaccount_viewmodel.dart';
+import 'package:jwell_hlapp/ui/pages/main/main.dart';
 import 'package:jwell_hlapp/ui/widgets/login/loginpage_accountandpassword.dart';
 import 'package:jwell_hlapp/ui/widgets/login/loginpage_bottom.dart';
 import 'package:jwell_hlapp/ui/widgets/login/loginpage_button.dart';
@@ -126,6 +130,7 @@ class _RYPassWordAndAccountLoginPageState
     LoginWithUserNameAndAccount.requestLoginPassWordAndAccount(userName, password).then((res){
       print(res.user.userCode);
       seaveUserLoginState(res);
+      Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context) => RYMainScreen()), (route) => route == null);
     });
   }
 

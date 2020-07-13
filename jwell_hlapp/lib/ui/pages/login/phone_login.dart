@@ -5,7 +5,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:jwell_hlapp/core/router/application.dart';
 import 'package:jwell_hlapp/core/router/router_config.dart';
-import 'package:jwell_hlapp/ui/pages/login/passwordandaccount_login.dart';
 import 'package:jwell_hlapp/ui/widgets/login/loginpage_accountandpassword.dart';
 import 'package:jwell_hlapp/ui/widgets/login/loginpage_bottom.dart';
 import 'package:jwell_hlapp/ui/widgets/login/loginpage_button.dart';

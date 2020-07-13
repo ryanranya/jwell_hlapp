@@ -33,6 +33,7 @@ class _MyAppState extends State<MyApp> {
 
     return MaterialApp(
       title: '海螺协同',
+      debugShowCheckedModeBanner: false,
       onGenerateRoute: Application.router.generator,
 //      onGenerateRoute: RYRouter.generateRoute,
 //      关于主题
@@ -40,6 +41,7 @@ class _MyAppState extends State<MyApp> {
 //      关于路由
 //      initialRoute: RYRouter.initialRoute,
       home: isLoginState?RYMainScreen():RYLoginScreen(),
+//      home: RYLoginScreen(),
       onUnknownRoute: RYRouter.unknownRoute,
     );
   }
