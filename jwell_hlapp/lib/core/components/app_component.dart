@@ -38,6 +38,7 @@ class _MyAppState extends State<MyApp> {
 //      onGenerateRoute: RYRouter.generateRoute,
 //      关于主题
       theme: RYAppTheme.norTheme,
+
 //      关于路由
 //      initialRoute: RYRouter.initialRoute,
       home: isLoginState?RYMainScreen():RYLoginScreen(),

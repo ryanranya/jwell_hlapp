@@ -18,7 +18,7 @@ class HomePageSearchWidget extends StatelessWidget {
         children: <Widget>[
           Container(
               margin: EdgeInsets.only(left: 20.w),
-              child: Image.asset("assets/images/home/home_search.png",width: 40.w,height: 40.w,)),
+              child: Image.asset("assets/images/home/home_search.png",width: 30.w,height: 30.w,)),
           Container(
             margin: EdgeInsets.only(left: 20.w),
             child: Text("搜索",style: TextStyle(
