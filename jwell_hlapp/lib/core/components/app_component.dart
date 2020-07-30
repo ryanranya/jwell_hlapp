@@ -41,8 +41,8 @@ class _MyAppState extends State<MyApp> {
 
 //      关于路由
 //      initialRoute: RYRouter.initialRoute,
-      home: isLoginState?RYMainScreen():RYLoginScreen(),
-//      home: RYLoginScreen(),
+//      home: isLoginState?RYMainScreen():RYLoginScreen(),
+      home: RYLoginScreen(),
       onUnknownRoute: RYRouter.unknownRoute,
     );
   }
